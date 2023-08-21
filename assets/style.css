@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+/* html ------------------*/
+body {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+/* 言語サイズ調整----------- */
+.jp {
+  font-size: 14px;
+}
+h1 {
+  font-size: 26px;
+}
+h1 .jp {
+  font-size: 24px;
+} 
+
+/* ヘッダー ----------------*/
+header {
+  background-color: rgb(206, 137, 137);
+  color: white;
+  line-height:1.5;
+  width: 100%;
+  height: auto;
+}
+.container {
+  padding: 20px 30px;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 0,
+  'opsz' 40
+}
+.material-symbols-outlined.md-48 {
+  font-size: 48px;
+}
+/* ハンバーガー ------------------*/
+#menu-panel {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding: 8rem 2rem 2rem;
+  width: 40vw;
+  height: 100vh;
+  background-color: rgba(254, 254, 254, 0.9);
+  transition: .4s;
+}
+ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #232323;
+  line-height: 2;
+}
+.hidden {
+  display: none;
+}
+
+/* メイン ------------------*/
+main {
+  padding: 0px;
+}
+main h1 {
+  text-align: center;
+  padding: 50px;
+  color: #3f3f3f;
+}
+img{
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+#menu {
+  margin: auto;
+  padding: 0 30px 30px 30px;
+  display: grid;
+  justify-content: space-around;
+  gap: 30px;
+  max-width: 800px;
+}
+#event {
+  margin: auto;
+  padding: 0 30px 30px 30px;
+  display: grid;
+  justify-content: space-around;
+  gap: 30px;
+  max-width: 800px;
+}
+
+#products-container {
+  margin: auto;
+  padding: 0 30px 30px 30px;
+  display: grid;
+  justify-content: space-around;
+  gap: 30px;
+  max-width: 800px;
+}
+
+#products-container p {
+  margin-top: 1em;
+}
+
+
+
+
+/* フッター -----------------*/
+footer {
+  background-color: rgb(206, 137, 137);
+  width: 100%;
+  height: auto;
+}
+
+/* マテリアルアイコン */
+.material-symbols-outlined {
+  font-family: 'Material Icons';
+  content: 'f182';
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 100,
+  'GRAD' 0,
+  'opsz' 48
+}
+.material-symbols-outlined.md-68 { 
+  font-size: 68px;
+  font-weight: 100;
+  padding: 20px;
+  text-decoration: none;
+}
+.material-symbols-outlined.md-light.md-inactive {
+  color: rgba(255, 255, 255);
+}
+
+
+
