@@ -8,24 +8,29 @@ const keyframes = {
 };
 const options = {
   duration: 2000,
-  easing: 'ease',
+  easing: 'ease-in-out',
 };
 
 heading.animate(keyframes, options);
 
-
 //ハンバーガーメニュー
 const menuIcon = document.querySelector('.menu-icon');
 const mobileMenu = document.querySelector('#menu-panel');
+const closeIcon = mobileMenu.querySelector('.visible');
 
 menuIcon.addEventListener('click', function() {
-  mobileMenu.classList.toggle('visible');
+mobileMenu.classList.toggle('hidden');
+});
+closeIcon.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
 });
 
-
-
-
-
+document.addEventListener('click', function(event) {
+  const target = event.target;
+  if (target.closest('a[href="#menu-area"]')) {
+    mobileMenu.classList.remove('hidden'); // メニューを閉じる
+  }
+});
 
 //title(タブ、ドキュメント)
 const practiceName   = 'practiceKojo_';
@@ -98,3 +103,22 @@ for (let i = 0; i < lists2.length; i++) {
   const content = `<div><img src="img/${img}" alt=""><p><br>${name}</p></div>`;
   event.insertAdjacentHTML('beforeend', content);
 }
+
+//wear
+const thumbImages = document.querySelectorAll('.gallery-thumbnails img');
+const mainImage = document.querySelector('.gallery-image img');
+
+thumbImages.forEach(function(thumbImage) {
+  thumbImage.addEventListener('mouseover', function(event) {
+    mainImage.src = event.target.src;
+    mainImage.animate({ opacity: [0, 1] }, 500);
+  });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  const firstThumbnail = document.querySelector('.gallery-thumbnails li:first-child img');
+  const galleryImage = document.querySelector('.gallery-image img');
+
+  // 最初のサムネイル画像を初期ギャラリー画像に設定
+  galleryImage.src = firstThumbnail.src;
+});
